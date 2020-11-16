@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/forYouScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+   <LinearLayout
+       android:orientation="vertical"
+       android:padding="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="@string/recommended_for_you"
+               android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+               android:textColor="@color/black"/>
+
+           <TextView
+               android:layout_gravity="bottom"
+               android:id="@+id/tv_recommended_arrow"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/right_arrow" />
+       </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/default_recyclerView"
+        android:padding="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="@string/games_we_are_playing"
+               android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+               android:textColor="@color/black"/>
+
+           <TextView
+               android:layout_gravity="bottom"
+               android:id="@+id/tv_games_arrow"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/right_arrow" />
+       </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/games_recyclerView"
+        android:padding="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="@string/entertainment"
+               android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+               android:textColor="@color/black"/>
+
+           <TextView
+               android:layout_gravity="bottom"
+               android:id="@+id/tv_entertainment_arrow"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/right_arrow" />
+       </LinearLayout>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/entertainment_recyclerView"
+           android:padding="14dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+       </androidx.recyclerview.widget.RecyclerView>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="@string/food_and_drink"
+               android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+               android:textColor="@color/black"/>
+
+           <TextView
+               android:layout_gravity="bottom"
+               android:id="@+id/tv_foodAndDrink"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/right_arrow" />
+       </LinearLayout>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/food_recyclerView"
+           android:padding="14dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+       </androidx.recyclerview.widget.RecyclerView>
+   </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/forYouProgress"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="250dp"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+</LinearLayout>

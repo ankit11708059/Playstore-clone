@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/linear_searchLayout"
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+   <com.arlib.floatingsearchview.FloatingSearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_toStartOf="@id/voice_search"
+        app:floatingSearch_actionMenuOverflowColor="@color/white"
+        app:floatingSearch_close_search_on_keyboard_dismiss="true"
+        app:floatingSearch_leftActionMode="showHamburger"
+        app:floatingSearch_searchBarMarginLeft="5dp"
+        app:floatingSearch_searchBarMarginRight="5dp"
+        app:floatingSearch_showVoiceInput="true"
+        app:floatingSearch_searchBarMarginTop="5dp"
+        app:floatingSearch_searchHint="Search Apps"
+        app:floatingSearch_showSearchKey="true"
+        app:floatingSearch_suggestionsListAnimDuration="250"/>
+
+        <ImageView
+            android:id="@+id/voice_search"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_alignParentEnd="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_voicesearch"/>
+    </RelativeLayout>
+    <include
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/suggestLayout"
+        android:layout_below="@id/linear_searchLayout"
+        android:layout_above="@id/bottom_navigation"
+        layout="@layout/suggest_layout"/>
+    <include
+        android:layout_below="@id/linear_searchLayout"
+        android:id="@+id/tabActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        layout="@layout/tab_activity"/>
+    <include
+        android:visibility="gone"
+        android:id="@+id/searchResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/linear_searchLayout"
+        layout="@layout/search_result"/>
+    <TextView
+        android:layout_below="@id/linear_searchLayout"
+        android:id="@+id/notApps"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="@string/no_items"
+        android:textStyle="italic"
+        android:visibility="gone"
+        android:drawablePadding="12dp"
+        app:drawableTopCompat="@drawable/ic_baseline_error_outline_24"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        android:background="?actionBarItemBackground"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:itemIconTint="@color/bottom_nav_color" />
+
+
+</RelativeLayout>

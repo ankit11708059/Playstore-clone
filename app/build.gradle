@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.cloneplaystore"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.Ferfalk:SimpleSearchView:0.1.6'
+    implementation 'com.google.firebase:firebase-core:17.5.1'
+    testImplementation 'junit:junit:4.12'
+    implementation 'in.arunkumarsampath:suggestions:1.0.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'org.parceler:parceler-api:1.1.13'
+    annotationProcessor 'org.parceler:parceler:1.1.13'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.takisoft.fix:preference-v7:25.3.0.0'
+    implementation 'com.github.Inconnu08:android-ratingreviews:1.2.0'
+    implementation 'com.facebook.stetho:stetho-okhttp:1.5.1'
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    //Dagger
+    implementation "com.google.dagger:dagger:2.27"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.23.2"
+    compileOnly 'com.google.android.wearable:wearable:2.8.1'
+
+
+    // ViewModel and LiveData
+    def lifecycle_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    //Retrofit
+    def retrofit = "2.6.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+
+    //Rxjava
+    def rxAndroid = "2.1.1"
+    def rxjava = "2.2.9"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+
+
+
+
+
+
+
+}

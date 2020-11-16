@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_hint"
+        app:iconTint="@android:color/black"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:title="@string/app_name"
+        android:icon="@drawable/menu_img"
+        app:showAsAction="ifRoom">
+        <menu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <item
+                    android:id="@+id/menu_share"
+                    android:title="@string/share"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/menu_flag"
+                    android:title="@string/flag_as_inappropriate"
+                    app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

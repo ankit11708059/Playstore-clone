@@ -1,0 +1,7 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="NavigationView">
+        <item name="android:listDivider">@color/dark_gray</item>
+    </style>
+
+</resources>

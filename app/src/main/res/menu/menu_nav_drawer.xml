@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/nav_apps_and_games"
+            android:icon="@drawable/ic_nav_apps_and_games"
+            android:title="@string/my_apps_amp_games"/>
+        <item
+            android:icon="@drawable/ic_nav_my_notifications"
+            android:title="@string/notifications"/>
+        <item
+            android:icon="@drawable/ic_nav_subscriptions"
+            android:title="@string/subscriptions"/>
+        <item
+            android:icon="@drawable/ic_nav_wish_list"
+            android:title="@string/wishList" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item
+            android:icon="@drawable/ic_nav_account"
+            android:title="@string/account" />
+        <item
+            android:icon="@drawable/ic_nav_redeem"
+            android:title="@string/payment_methods" />
+
+        <item
+            android:icon="@drawable/ic_nav_play_protect"
+            android:title="@string/play_protect" />
+        <item
+            android:icon="@drawable/ic_nav_settings"
+            android:title="@string/settings" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
+
+        <item
+            android:icon="@drawable/ic_nav_movies"
+            android:title="@string/movies" />
+        <item
+            android:icon="@drawable/ic_nav_books"
+            android:title="@string/books" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group4">
+        <item android:title="@string/redeem"/>
+        <item android:title="@string/help_amp_feedback" />
+        <item android:title="@string/parent_guide" />
+        <item android:title="@string/about_google_play" />
+    </group>
+</menu>
